@@ -1,10 +1,9 @@
-import java.util.*;
 class Solution {
     public int solution(String num_str) {
         int answer = 0;
-        char[] num = num_str.toCharArray();
-        for(int i=0; i<num.length;i++){
-            answer += Character.getNumericValue(num[i]);
+        String[] num = num_str.split("");
+        for(String n : num){
+            answer += Integer.parseInt(n);
         }
         return answer;
     }
