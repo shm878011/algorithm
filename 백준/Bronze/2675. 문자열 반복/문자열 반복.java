@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Main  {
     public static void main(String[] args) throws IOException{
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -10,9 +10,10 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int count = Integer.parseInt(st.nextToken());
             String result = st.nextToken();
-            String[] result2 = result.split("");
-            for(int j=0;j<result2.length;j++){
-                System.out.print(result2[j].repeat(count));
+            for(int j=0;j<result.length();j++){
+                for(int k=0; k<count;k++){
+                    System.out.print(result.charAt(j));
+                }
             }
             System.out.println();
             
