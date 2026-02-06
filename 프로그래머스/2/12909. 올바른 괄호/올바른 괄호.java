@@ -9,7 +9,7 @@ class Solution {
             else if(a==')'){
                 if(stack.isEmpty()){
                     answer = false;
-                    return answer;
+                    break;
                 }
                     
                 else{
@@ -17,10 +17,9 @@ class Solution {
                 } 
             }
         }
-        if(stack.isEmpty())
-            answer = true;
-        else
+        if(!stack.isEmpty())
             answer = false;
+     
         return answer;
     }
 }
