@@ -9,10 +9,9 @@ class Solution {
             stack.push(i);
             while(!stack.isEmpty()){
                 int node = stack.pop();
-                if(visited[node]!=0) continue;
-                visited[node]=1;
                 for(int j=0; j<n;j++){
                     if(computers[node][j]==0 || visited[j]==1) continue;
+                    visited[j]=1;
                     stack.push(j);
                 }
             }
